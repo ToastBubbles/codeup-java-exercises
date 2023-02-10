@@ -26,7 +26,7 @@ public class ControlFlowExercises {
      * @param args
      */
     public static void main(String[] args) {
-        doWhileLoop();
+        fizzBuzz();
     }
     private static void whileLoop(){
         int i = 5;
@@ -36,14 +36,48 @@ public class ControlFlowExercises {
         }
     }
     private static void doWhileLoop(){
-        int i = 100;
+        double i = 2;
 //        do {
 //            System.out.println(i);
 //            i+=2;
 //        }while(i < 100);
         do {
-            System.out.println(i);
-            i-=5;
-        }while(i >= -10);
+            System.out.printf("%.0f%n",i);
+            i = Math.pow(i, 2);
+        }while(i <= 1000000);
     }
+    private static void forLoop(){
+
+        for(double i = 2; i<=1000000; i = Math.pow(i, 2)){
+
+            System.out.printf("%.0f%n",i);
+            ;}
+
+    }
+
+    /**
+     * Write a program that prints the numbers from 1 to 100.
+     * For multiples of three: print “Fizz” instead of the number.
+     * For the multiples of five: print “Buzz”.
+     * For numbers which are multiples of both three and five: print “FizzBuzz”.
+     */
+    private static void fizzBuzz(){
+        int i = 1;
+        while (i <=100){
+            String output = "";
+            if(i % 3 == 0){
+                output = output.concat("fizz");
+            }
+            if(i % 5 == 0){
+                output = output.concat("buzz");
+            }
+            if(output.length() > 0){
+                System.out.println(output);
+            }else{
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+
 }
