@@ -28,7 +28,7 @@ public class ControlFlowExercises {
      * @param args
      */
     public static void main(String[] args) {
-        printGrade();
+        tableGen();
     }
     private static void whileLoop(){
         int i = 5;
@@ -112,7 +112,7 @@ public class ControlFlowExercises {
         while (number <= userInt * iteration){
             int square = (int) Math.pow(number,2);
             int cube = (int) Math.pow(number,3);
-            printTableLine(number,square,cube);
+            System.out.printf(" %-7s| %-7s| %-7s%n", number,square,cube);
             number++;
         }
 
@@ -124,9 +124,10 @@ public class ControlFlowExercises {
             askUser(sc, number, iteration+1, userInt);
         }
     }
-    private static void printTableLine(int i, int s, int c){
-        System.out.printf(" %-7s| %-7s| %-7s%n", i,s,c);
-    }
+//    private static void printTableLine(int i, int s, int c){
+//
+//        System.out.printf(" %-7s| %-7s| %-7s%n", i,s,c);
+//    }
 
 
     /**
