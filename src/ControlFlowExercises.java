@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class ControlFlowExercises {
     /**
      * While
@@ -26,7 +28,7 @@ public class ControlFlowExercises {
      * @param args
      */
     public static void main(String[] args) {
-        fizzBuzz();
+        printGrade();
     }
     private static void whileLoop(){
         int i = 5;
@@ -79,5 +81,81 @@ public class ControlFlowExercises {
             i++;
         }
     }
+
+    /**
+     * Prompt the user to enter an integer.
+     * Display a table of squares and cubes from 1 to the value entered.
+     * Ask if the user wants to continue.
+     * Assume that the user will enter valid data.
+     * Only continue if the user agrees to.
+     * number | squared | cubed
+     * ------ | ------- | -----
+     * 1      | 1       | 1
+     * 2      | 4       | 8
+     * 3      | 9       | 27
+     * 4      | 16      | 64
+     * 5      | 25      | 125
+     */
+    private static void tableGen(){
+
+        System.out.println("Multiplication table");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("What number would you like to go to? ");
+        int userInt = sc.nextInt();
+        sc.nextLine();
+        askUser(sc,1, 1, userInt);
+
+    }
+    private static void askUser(Scanner sc, int number, int iteration, int userInt){
+        System.out.printf(" %-7s| %-7s| %-7s%n", "number","squared","cubed");
+        System.out.printf(" -------|--------|--------%n");
+        while (number <= userInt * iteration){
+            int square = (int) Math.pow(number,2);
+            int cube = (int) Math.pow(number,3);
+            printTableLine(number,square,cube);
+            number++;
+        }
+
+        System.out.println("Continue?");
+        String userResp = sc.nextLine();
+
+        if(userResp.equals("y")){
+            System.out.println(number);
+            askUser(sc, number, iteration+1, userInt);
+        }
+    }
+    private static void printTableLine(int i, int s, int c){
+        System.out.printf(" %-7s| %-7s| %-7s%n", i,s,c);
+    }
+
+
+    /**
+     *
+     */
+    private static void printGrade(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your grade");
+        int userResp = sc.nextInt();
+        sc.nextLine();
+        if(inRange(userResp, 88,100)){
+            System.out.println("you got an A");
+        }else if(inRange(userResp, 80,87)){
+            System.out.println("you got an B");
+        }
+        else if(inRange(userResp, 67,79)){
+            System.out.println("you got an C");
+        }else if(inRange(userResp, 60,66)){
+            System.out.println("you got an D");
+        }
+        else if(inRange(userResp, 0,59)){
+            System.out.println("you got an F");
+        }
+
+//        System.out.println(userResp);
+    }
+    private static boolean inRange(int num, int low, int high){
+        return low <= num && num <= high;
+    }
+
 
 }
