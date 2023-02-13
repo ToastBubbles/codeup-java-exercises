@@ -23,4 +23,7 @@ public class Bob {
         }
 
     }
+    public static void TestMethod(){
+        System.out.println("test");
+    }
 }
