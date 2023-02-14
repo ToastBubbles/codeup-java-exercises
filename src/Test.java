@@ -23,10 +23,24 @@ public class Test {
 //        Scanner sc = new Scanner(System.in);
 //        String userResp = sc.nextLine();
 //        sayHello(userResp);
-        sayHello("Justin");
-        sayHello("Justin", "Reich");
+//        sayHello("Justin");
+//        sayHello("Justin", "Reich");
 //        listAdjuster(myList);
 //        Bob.main();
+
+
+
+
+//        public class TernaryTester {
+//     public static void main(String[] args) {
+        int x = 5 * 4 % 3;
+        System.out.println(x);
+//        int t = "s";
+        String tester = "tttt";
+        tester = tester + x;
+        System.out.println(tester);
+//                    }
+// }
     }
     public static void sayHello(String first){
         System.out.printf("hello %s", first);
