@@ -1,7 +1,8 @@
 package oop;
 
-public class DishTest {
-//-- SHORT ASSIGNMENT #2 --
+public class DishTools {
+
+//    -- SHORT ASSIGNMENT #2 --
 //    Create a class of static members (variables and methods) called DishTools
 //  - AVERAGE_COST_OF_DISH_IN_CENTS - an integer constant set to 1300
 //            - shoutDishName() - that takes in a Dish object and prints out the name in all caps
@@ -9,17 +10,18 @@ public class DishTest {
 //  - flipRecommendation() - that takes in a Dish object and reverses the wouldRecommend boolean value
 //    Try out the DishTools methods with Dish objects in the DishTest main method
 //    BONUS - add some static methods to the Dish class that compares two dishes in some way
-    public static void main(String[] args) {
-        Dish dish1 = new Dish();
-        dish1.setNameOfDish("rattatouioe");
-        dish1.setCostInCents(54000);
-        dish1.setWouldRecommend(false);
-        dish1.printSummary();
-DishTools.flipRecommendation(dish1);
-        dish1.printSummary();
-        DishTools.shoutDishName(dish1);
-        DishTools.analyzeDishCost(dish1);
+     static int average_cost_of_dish_in_cents = 1300;
+     public static void shoutDishName(Dish dish){
+         System.out.println(dish.getNameOfDish().toUpperCase());
+     }
+
+    public static void analyzeDishCost(Dish dish){
+         if(dish.getCostInCents() > average_cost_of_dish_in_cents)
+            System.out.println("more expensive");
+         else
+             System.out.println("less expensive");
     }
-
-
+    public static void flipRecommendation(Dish dish){
+        dish.setWouldRecommend(!dish.getWouldRecommend());
+    }
 }
