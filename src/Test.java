@@ -17,9 +17,19 @@ public class Test {
 
     public static int[] nums = {1,2,3};
     public static List<Integer> myList = new ArrayList<>();
-
-
+/* TODO: create an array of doubles called numbers and assign five different values (try with and without an initializer).
+    Find the sum of all five double values using an enhanced for loop.
+ */
+ static double[] doubles = {5,4,3,2,1};
     public static void main(String[] args) {
+        double total = 0;
+        for(double d : doubles){
+//            System.out.println(d);
+            total += d;
+        }
+        System.out.println(total
+        );
+
 //        Scanner sc = new Scanner(System.in);
 //        String userResp = sc.nextLine();
 //        sayHello(userResp);
