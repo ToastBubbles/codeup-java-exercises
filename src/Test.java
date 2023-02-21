@@ -17,9 +17,11 @@ public class Test {
 
     public static int[] nums = {1,2,3};
     public static List<Integer> myList = new ArrayList<>();
-/* TODO: create an array of doubles called numbers and assign five different values (try with and without an initializer).
-    Find the sum of all five double values using an enhanced for loop.
- */
+    /* TODO: create a class called Product with two private properties of name and priceInCents.
+        Add a public static method called, find average price that takes in an array of products
+        and finds the average price of all products. Add a main method to the class to test some
+        values.
+     */
  static double[] doubles = {5,4,3,2,1};
     public static void main(String[] args) {
         double total = 0;
@@ -27,8 +29,8 @@ public class Test {
 //            System.out.println(d);
             total += d;
         }
-        System.out.println(total
-        );
+//        System.out.println(total
+//        );
 
 //        Scanner sc = new Scanner(System.in);
 //        String userResp = sc.nextLine();
