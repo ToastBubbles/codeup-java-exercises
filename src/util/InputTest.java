@@ -10,15 +10,19 @@ public class InputTest {
             while (!in1.getInt(userNum, 0,10)){
                 System.out.println("ha, wrong");
                 System.out.println("enter a num between 0 and 10...");
-                userNum = in1.getInt();
+                userNum = Integer.valueOf(in1.getString());
 
             }
             System.out.println("enter a num with a decimal between 0 and 1...");
-            double userDub = in1.getDouble();
+            /**
+             * Integer.valueOf(String s);
+             * Double.valueOf(String s);
+             */
+            double userDub = Double.valueOf(in1.getString());
             while (!in1.getDouble(userDub, 0,1)){
                 System.out.println("ha, wrong");
                 System.out.println("enter a num with a decimal between 0 and 1...");
-                userDub = in1.getDouble();
+                userDub = Double.valueOf(in1.getString());
 
             }
             System.out.println("gg");

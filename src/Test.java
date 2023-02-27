@@ -24,11 +24,11 @@ public class Test {
      */
  static double[] doubles = {5,4,3,2,1};
     public static void main(String[] args) {
-        double total = 0;
-        for(double d : doubles){
-//            System.out.println(d);
-            total += d;
-        }
+//        double total = 0;
+//        for(double d : doubles){
+////            System.out.println(d);
+//            total += d;
+//        }
 //        System.out.println(total
 //        );
 
@@ -39,18 +39,31 @@ public class Test {
 //        sayHello("Justin", "Reich");
 //        listAdjuster(myList);
 //        Bob.main();
-
+/**
+ * Mini-exercise: Investigate the substring method for String objects in the Java API.
+ * Find out what kind of exception it throws. Create a test class with a main method.
+ * Set up a try-catch block that defines a string and finds its length.
+ * Once you have the length of your string, modify your program so it creates a substring from your original string,
+ * but give it an index that doesn't exist so you get the error message.
+ */
+String shrimpers = "shrimpers";
+try {
+    shrimpers.substring(-1,100);
+}
+catch (IndexOutOfBoundsException err){
+    System.out.println(err);
+}
 
 
 
 //        public class TernaryTester {
 //     public static void main(String[] args) {
-        int x = 5 * 4 % 3;
-        System.out.println(x);
-//        int t = "s";
-        String tester = "tttt";
-        tester = tester + x;
-        System.out.println(tester);
+//        int x = 5 * 4 % 3;
+//        System.out.println(x);
+////        int t = "s";
+//        String tester = "tttt";
+//        tester = tester + x;
+//        System.out.println(tester);
 //                    }
 // }
     }
